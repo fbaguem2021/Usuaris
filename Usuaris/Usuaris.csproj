@@ -74,6 +74,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUsuaris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuaris.Designer.cs">
+      <DependentUpon>FormUsuaris.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Bd.cs" />
     <Compile Include="Models\SeguretatBd.cs" />
     <Compile Include="Models\Usuari.cs" />
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuaris.resx">
+      <DependentUpon>FormUsuaris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,6 +117,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\add.png" />
+    <Content Include="Images\bin.png" />
+    <Content Include="Images\log-out.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

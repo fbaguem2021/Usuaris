@@ -29,5 +29,9 @@ namespace Usuaris
 
         }
 
+        private void menuItemSortir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

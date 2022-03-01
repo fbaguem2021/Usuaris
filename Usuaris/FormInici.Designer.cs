@@ -29,70 +29,71 @@ namespace Usuaris
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.toolStripAdministrador = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemRols = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemUsuaris = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.sortirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.menuItemSortir = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administradorToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripAdministrador});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip1";
             // 
-            // administradorToolStripMenuItem
+            // toolStripAdministrador
             // 
-            this.administradorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rolsToolStripMenuItem,
-            this.usuarisToolStripMenuItem,
+            this.toolStripAdministrador.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemRols,
+            this.menuItemUsuaris,
             this.toolStripMenuItem1,
-            this.sortirToolStripMenuItem});
-            this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.administradorToolStripMenuItem.Text = "Administrador";
+            this.menuItemSortir});
+            this.toolStripAdministrador.Name = "toolStripAdministrador";
+            this.toolStripAdministrador.Size = new System.Drawing.Size(95, 20);
+            this.toolStripAdministrador.Text = "Administrador";
             // 
-            // rolsToolStripMenuItem
+            // menuItemRols
             // 
-            this.rolsToolStripMenuItem.Name = "rolsToolStripMenuItem";
-            this.rolsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rolsToolStripMenuItem.Text = "Rols";
+            this.menuItemRols.Name = "menuItemRols";
+            this.menuItemRols.Size = new System.Drawing.Size(180, 22);
+            this.menuItemRols.Text = "Rols";
             // 
-            // usuarisToolStripMenuItem
+            // menuItemUsuaris
             // 
-            this.usuarisToolStripMenuItem.Name = "usuarisToolStripMenuItem";
-            this.usuarisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuarisToolStripMenuItem.Text = "Usuaris";
+            this.menuItemUsuaris.Name = "menuItemUsuaris";
+            this.menuItemUsuaris.Size = new System.Drawing.Size(180, 22);
+            this.menuItemUsuaris.Text = "Usuaris";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
-            // sortirToolStripMenuItem
+            // menuItemSortir
             // 
-            this.sortirToolStripMenuItem.Name = "sortirToolStripMenuItem";
-            this.sortirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sortirToolStripMenuItem.Text = "Sortir";
+            this.menuItemSortir.Name = "menuItemSortir";
+            this.menuItemSortir.Size = new System.Drawing.Size(180, 22);
+            this.menuItemSortir.Text = "Sortir";
+            this.menuItemSortir.Click += new System.EventHandler(this.menuItemSortir_Click);
             // 
             // FormInici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStrip);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "FormInici";
             this.Text = "Home";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,11 +101,11 @@ namespace Usuaris
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuarisToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem toolStripAdministrador;
+        private System.Windows.Forms.ToolStripMenuItem menuItemRols;
+        private System.Windows.Forms.ToolStripMenuItem menuItemUsuaris;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem sortirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuItemSortir;
     }
 }
