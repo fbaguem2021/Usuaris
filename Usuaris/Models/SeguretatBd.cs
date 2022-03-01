@@ -37,7 +37,7 @@ namespace Usuaris.Models
             DataTable llista = new DataTable();
 
             sentencia.Connection = Bd.connection;
-            sentencia.CommandText = "select * from usuaris";
+            sentencia.CommandText = "select usuaris.*, rols.nom from usuaris join rols on rols.id = usuaris.rols_id";
 
             Bd.connection.Open();
 
@@ -58,9 +58,40 @@ namespace Usuaris.Models
                 usersList[i].contrasenya = contenido[4].ToString();
                 usersList[i].actiu = (bool) contenido[5];
                 usersList[i].rols_id = (int) contenido[6];
+                usersList[i].rol = contenido[7].ToString();
             }
 
             return usersList;
+        }
+
+
+        public static Rol[] select_rols()
+        {
+            SqlCommand sentencia = new SqlCommand();
+            SqlDataReader dades;
+            DataTable llista = new DataTable();
+
+            sentencia.Connection = Bd.connection;
+            sentencia.CommandText = "select *from rols";
+
+            Bd.connection.Open();
+
+            dades = sentencia.ExecuteReader();
+            llista.Load(dades);
+
+            Bd.connection.Close();
+
+            Rol[] rolsList = new Rol[llista.Rows.Count];
+            for (int i = 0; i < rolsList.Length; i++)
+            {
+                Object[] contenido = Array.ConvertAll(llista.Rows[i].ItemArray, x => x);
+                rolsList[i] = new Rol();
+                rolsList[i].id = (int)contenido[0];
+                rolsList[i].nom = contenido[1].ToString();
+                rolsList[i].actiu = (bool)contenido[2];
+            }
+
+            return rolsList;
         }
 
         public static void insertat_usuari(Usuari user)

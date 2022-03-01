@@ -77,6 +77,7 @@ namespace Usuaris
             this.button_acceptar.TabIndex = 4;
             this.button_acceptar.Text = "Acceptar";
             this.button_acceptar.UseVisualStyleBackColor = true;
+            this.button_acceptar.Click += new System.EventHandler(this.button_acceptar_Click);
             // 
             // button_cancelar
             // 
@@ -86,6 +87,7 @@ namespace Usuaris
             this.button_cancelar.TabIndex = 5;
             this.button_cancelar.Text = "Cancelar";
             this.button_cancelar.UseVisualStyleBackColor = true;
+            this.button_cancelar.Click += new System.EventHandler(this.button_cancelar_Click);
             // 
             // FormLogin
             // 

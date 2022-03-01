@@ -27,6 +27,7 @@ namespace Usuaris.Models
         public String contrasenya { get; set; }
         public bool actiu { get; set; }
         public int rols_id { get; set; }
+        public String rol { get; set; }
 
         public String hash(String psswd)
         {

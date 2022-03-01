@@ -14,7 +14,7 @@ namespace Usuaris
 {
     public partial class FormUsuaris : Form
     {
-        List<Usuari> llista;
+        private List<Usuari> llista;
         public FormUsuaris()
         {
             InitializeComponent();
@@ -22,11 +22,13 @@ namespace Usuaris
         private void FormUsuaris_Load(object sender, EventArgs e)
         {
             llista = SeguretatBd.select_users().ToList<Usuari>();
+            dgUsuaris.AutoGenerateColumns = false;
             dgUsuaris.DataSource = llista;
         }
         private void msiAfegir_Click(object sender, EventArgs e)
         {
-
+            FormUsuari f = new FormUsuari(llista);
+            f.ShowDialog();
         }
 
         private void msiEsboorrar_Click(object sender, EventArgs e)

@@ -70,6 +70,7 @@ namespace Usuaris
             this.menuItemUsuaris.Name = "menuItemUsuaris";
             this.menuItemUsuaris.Size = new System.Drawing.Size(180, 22);
             this.menuItemUsuaris.Text = "Usuaris";
+            this.menuItemUsuaris.Click += new System.EventHandler(this.menuItemUsuaris_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -92,6 +93,7 @@ namespace Usuaris
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormInici";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.FormInici_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);

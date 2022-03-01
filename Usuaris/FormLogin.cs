@@ -13,18 +13,12 @@ namespace Usuaris
 {
     public partial class FormLogin : Form
     {
-        private bool loginCorrect { get; set; }
-        public bool loginCancel { get; set; }
-        public Usuari loggedUser { get; set; }
-        public bool isCorrect() { return this.loginCorrect; }
         public FormLogin()
         {
             InitializeComponent();
         }
         private Usuari login()
         {
-            this.loginCorrect = false;
-            this.loggedUser = null;
             Usuari[] usersList = SeguretatBd.select_users();
             Usuari usuari;
 
@@ -55,13 +49,14 @@ namespace Usuaris
 
         private void button_acceptar_Click(object sender, EventArgs e)
         {
-            login();
+            FormInici.loggedUser = login();
+            this.Close();
         }
 
         private void button_cancelar_Click(object sender, EventArgs e)
         {
-            this.loginCancel = true;
-            this.Close();
+            Application.Exit();
         }
+
     }
 }

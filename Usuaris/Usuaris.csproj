@@ -74,6 +74,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUsuari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuari.Designer.cs">
+      <DependentUpon>FormUsuari.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuaris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,7 @@
       <DependentUpon>FormUsuaris.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Bd.cs" />
+    <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\SeguretatBd.cs" />
     <Compile Include="Models\Usuari.cs" />
     <Compile Include="Program.cs" />
@@ -90,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuari.resx">
+      <DependentUpon>FormUsuari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuaris.resx">
       <DependentUpon>FormUsuaris.cs</DependentUpon>

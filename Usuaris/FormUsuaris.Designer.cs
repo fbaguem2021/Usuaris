@@ -35,6 +35,12 @@ namespace Usuaris
             this.msiAfegir = new System.Windows.Forms.ToolStripMenuItem();
             this.msiEsboorrar = new System.Windows.Forms.ToolStripMenuItem();
             this.msiSortir = new System.Windows.Forms.ToolStripMenuItem();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCorreu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCognoms = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnActiu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsuaris)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +60,13 @@ namespace Usuaris
             // dgUsuaris
             // 
             this.dgUsuaris.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUsuaris.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnCorreu,
+            this.ColumnNom,
+            this.ColumnCognoms,
+            this.ColumnActiu,
+            this.ColumnRol});
             this.dgUsuaris.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgUsuaris.Location = new System.Drawing.Point(0, 24);
             this.dgUsuaris.Name = "dgUsuaris";
@@ -84,6 +97,49 @@ namespace Usuaris
             this.msiSortir.Text = "Sortir";
             this.msiSortir.Click += new System.EventHandler(this.msiSortir_Click);
             // 
+            // ColumnId
+            // 
+            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnId.DataPropertyName = "id";
+            this.ColumnId.HeaderText = "Id";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.Visible = false;
+            // 
+            // ColumnCorreu
+            // 
+            this.ColumnCorreu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnCorreu.DataPropertyName = "correu";
+            this.ColumnCorreu.HeaderText = "Correu";
+            this.ColumnCorreu.Name = "ColumnCorreu";
+            // 
+            // ColumnNom
+            // 
+            this.ColumnNom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnNom.DataPropertyName = "nom";
+            this.ColumnNom.HeaderText = "Nom";
+            this.ColumnNom.Name = "ColumnNom";
+            // 
+            // ColumnCognoms
+            // 
+            this.ColumnCognoms.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnCognoms.DataPropertyName = "cognoms";
+            this.ColumnCognoms.HeaderText = "Cognoms";
+            this.ColumnCognoms.Name = "ColumnCognoms";
+            // 
+            // ColumnActiu
+            // 
+            this.ColumnActiu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnActiu.DataPropertyName = "actiu";
+            this.ColumnActiu.HeaderText = "Actiu";
+            this.ColumnActiu.Name = "ColumnActiu";
+            // 
+            // ColumnRol
+            // 
+            this.ColumnRol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnRol.DataPropertyName = "rol";
+            this.ColumnRol.HeaderText = "Rol";
+            this.ColumnRol.Name = "ColumnRol";
+            // 
             // FormUsuaris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,7 +149,7 @@ namespace Usuaris
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormUsuaris";
-            this.Text = "FormUsuaris";
+            this.Text = "Usuaris";
             this.Load += new System.EventHandler(this.FormUsuaris_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -110,5 +166,11 @@ namespace Usuaris
         private System.Windows.Forms.ToolStripMenuItem msiAfegir;
         private System.Windows.Forms.ToolStripMenuItem msiEsboorrar;
         private System.Windows.Forms.ToolStripMenuItem msiSortir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCorreu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCognoms;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnActiu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRol;
     }
 }
