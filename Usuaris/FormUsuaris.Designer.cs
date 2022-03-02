@@ -31,10 +31,10 @@ namespace Usuaris
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuaris));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.dgUsuaris = new System.Windows.Forms.DataGridView();
             this.msiAfegir = new System.Windows.Forms.ToolStripMenuItem();
             this.msiEsboorrar = new System.Windows.Forms.ToolStripMenuItem();
             this.msiSortir = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgUsuaris = new System.Windows.Forms.DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCorreu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,22 +56,6 @@ namespace Usuaris
             this.menuStrip.Size = new System.Drawing.Size(800, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
-            // 
-            // dgUsuaris
-            // 
-            this.dgUsuaris.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgUsuaris.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnId,
-            this.ColumnCorreu,
-            this.ColumnNom,
-            this.ColumnCognoms,
-            this.ColumnActiu,
-            this.ColumnRol});
-            this.dgUsuaris.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgUsuaris.Location = new System.Drawing.Point(0, 24);
-            this.dgUsuaris.Name = "dgUsuaris";
-            this.dgUsuaris.Size = new System.Drawing.Size(800, 426);
-            this.dgUsuaris.TabIndex = 1;
             // 
             // msiAfegir
             // 
@@ -96,6 +80,26 @@ namespace Usuaris
             this.msiSortir.Size = new System.Drawing.Size(63, 20);
             this.msiSortir.Text = "Sortir";
             this.msiSortir.Click += new System.EventHandler(this.msiSortir_Click);
+            // 
+            // dgUsuaris
+            // 
+            this.dgUsuaris.AllowUserToAddRows = false;
+            this.dgUsuaris.AllowUserToDeleteRows = false;
+            this.dgUsuaris.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUsuaris.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnCorreu,
+            this.ColumnNom,
+            this.ColumnCognoms,
+            this.ColumnActiu,
+            this.ColumnRol});
+            this.dgUsuaris.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgUsuaris.Location = new System.Drawing.Point(0, 24);
+            this.dgUsuaris.Name = "dgUsuaris";
+            this.dgUsuaris.ReadOnly = true;
+            this.dgUsuaris.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgUsuaris.Size = new System.Drawing.Size(800, 426);
+            this.dgUsuaris.TabIndex = 1;
             // 
             // ColumnId
             // 

@@ -10,6 +10,7 @@ namespace Usuaris.Models
     public static class Bd
     {
         public static SqlConnection connection = new SqlConnection
-            ("Server=192.168.56.101; Database=seguretat;User Id=SA; Password=Politecnics_0;");
+            //("Server=192.168.56.101; Database=seguretat;User Id=SA; Password=Politecnics_0;");
+            ("Server=192.168.56.102; Database=seguretat;User Id=SA; Password=Politecnics_0;");
     }
 }

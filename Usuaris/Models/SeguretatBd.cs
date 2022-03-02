@@ -123,6 +123,24 @@ namespace Usuaris.Models
             Bd.connection.Close();
         }
 
+        public static void delete_user(int id)
+        {
+            SqlCommand sentencia = new SqlCommand();
+            int ID = id;
+
+            sentencia.Connection = Bd.connection;
+            sentencia.CommandText =
+                "delete from usuaris where id = @ID";
+            sentencia.Parameters.Clear();
+            sentencia.Parameters.AddWithValue("ID", ID);
+
+            Bd.connection.Open();
+
+            sentencia.ExecuteNonQuery();
+
+            Bd.connection.Close();
+        }
+
         public static void cargarListaUsuarios(Usuari[] usuarios)
         {
             FormInici.listaUsuarios = usuarios.ToList<Usuari>();

@@ -29,6 +29,7 @@ namespace Usuaris
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInici));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripAdministrador = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemRols = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +80,7 @@ namespace Usuaris
             // 
             // menuItemSortir
             // 
+            this.menuItemSortir.Image = ((System.Drawing.Image)(resources.GetObject("menuItemSortir.Image")));
             this.menuItemSortir.Name = "menuItemSortir";
             this.menuItemSortir.Size = new System.Drawing.Size(180, 22);
             this.menuItemSortir.Text = "Sortir";

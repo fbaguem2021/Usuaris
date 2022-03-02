@@ -50,7 +50,10 @@ namespace Usuaris
         private void button_acceptar_Click(object sender, EventArgs e)
         {
             FormInici.loggedUser = login();
-            this.Close();
+            if ( !FormInici.loggedUser.Equals(null))
+            {
+                this.Close();
+            }
         }
 
         private void button_cancelar_Click(object sender, EventArgs e)
